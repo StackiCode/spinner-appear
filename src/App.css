@@ -1,0 +1,114 @@
+body {
+  font-size: 62.5%;
+  margin-left: 3rem;
+}
+
+.flexDisplay, .head, .container {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+}
+
+.sec {
+  position: relative;
+  width: 20rem;
+  height: 10rem;
+  padding: 0;
+}
+.sec_1 {
+  position: absolute;
+  top: 50%;
+  left: 2rem;
+  width: 15rem;
+  height: 3rem;
+  transform-origin: top left;
+  transform: translateY(-50%);
+  border: 1px solid #007bff;
+  border-radius: 0 2rem 2rem 0;
+  animation: anm_shrinkX 2s alternate infinite;
+  z-index: 0;
+}
+.sec_2 {
+  position: absolute;
+  transform-origin: top right;
+  transform: translateY(-50%);
+  border: 1px solid #fd7e14;
+  border-radius: 2rem 0 0 2rem;
+  animation: anm_shrinkX 2s 1s alternate infinite;
+  top: 50%;
+  right: 2rem;
+  width: 15rem;
+  height: 3rem;
+  z-index: 0;
+}
+.sec_3 {
+  position: absolute;
+  transform-origin: top left;
+  transform: translateY(-50%);
+  border: 1px solid #e83e8c;
+  border-radius: 0 2rem 2rem 0;
+  animation: anm_shrinkX 2s 2s alternate infinite;
+  top: 50%;
+  left: 2rem;
+  width: 15rem;
+  height: 3rem;
+  z-index: 0;
+}
+
+.head {
+  position: absolute;
+  transform: translateY(-50%);
+  align-items: center !important;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  margin: 0;
+  z-index: 1;
+}
+.head_1 {
+  top: 50%;
+  left: 0;
+  animation: anm_rotatef 2s infinite forwards;
+  background: radial-gradient(#fd7e14 0%, #fd7e14 50%, #fff 50%, #fff 60%, #fd7e14 60%, #fd7e14 100%);
+}
+.head_2 {
+  top: 50%;
+  right: 0;
+  animation: anm_rotateb 2s 1s infinite forwards;
+  animation-delay: 1s;
+  background: radial-gradient(#e83e8c 0%, #e83e8c 50%, #fff 50%, #fff 60%, #e83e8c 60%, #e83e8c 100%);
+}
+.head_3 {
+  top: 50%;
+  left: 0;
+  animation: anm_rotatef 2s 2s infinite forwards;
+  background: radial-gradient(#007bff 0%, #007bff 50%, #fff 50%, #fff 60%, #007bff 60%, #007bff 100%);
+}
+
+@keyframes anm_shrinkX {
+  from {
+    transform: translateY(-50%) scaleX(0.1);
+  }
+  to {
+    transform: translateY(-50%) scaleX(1);
+  }
+}
+@keyframes anm_rotatef {
+  from {
+    transform: translateY(-50%) rotateZ(0deg);
+  }
+  to {
+    transform: translateY(-50%) rotateZ(360deg);
+  }
+}
+@keyframes anm_rotateb {
+  from {
+    transform: translateY(-50%) rotateZ(360deg);
+  }
+  to {
+    transform: translateY(-50%) rotateZ(0deg);
+  }
+}
+
+/*# sourceMappingURL=App.css.map */
